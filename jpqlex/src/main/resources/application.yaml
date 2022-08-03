@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:jpa_example
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console.enabled: true
+    console:
+      path: h2admin
+  #Liquibase
+  liquibase:
+    change-log: classpath:/db/liquibase_changelog.yaml

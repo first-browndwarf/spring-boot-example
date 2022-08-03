@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - preConditions:
+      - runningAs:
+          username: sa
+  - changeSet:
+      id: 1
+      author: tieda1
+      changes:
+        - createTable:
+            tableName: member
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    - primaryKey: true
+                    - nullable: false
+              - column:
+                  name: name
+                  type: varchar(50)
+              - column:
+                  name: age
+                  type: int
+              - column:
+                  name: level
+                  type: int
