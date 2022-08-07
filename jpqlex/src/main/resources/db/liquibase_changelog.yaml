@@ -25,3 +25,32 @@ databaseChangeLog:
               - column:
                   name: level
                   type: int
+              - column:
+                  name: team_id
+                  type: bigint
+        - createTable:
+            tableName: team
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    - primaryKey: true
+                    - nullable: false
+              - column:
+                  name: name
+                  type: varchar(50)
+              - column:
+                  name: role
+                  type: varchar(255)
+              - column:
+                  name: member_id
+                  type: bigint
+        -  addForeignKeyConstraint:
+             baseColumnNames: team_id
+             baseTableName: member
+             constraintName: fk_teamid
+             referencedColumnNames: id
+             referencedTableName: team
+             onDelete: SET NULL

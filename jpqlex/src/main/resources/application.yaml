@@ -9,7 +9,7 @@ spring:
   h2:
     console.enabled: true
     console:
-      path: h2admin
+      path: /h2admin
   #Liquibase
   liquibase:
     change-log: classpath:/db/liquibase_changelog.yaml

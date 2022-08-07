@@ -1,9 +1,6 @@
 package com.browndwarf.jpqlex.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "member")
@@ -21,5 +18,9 @@ public class MemberEntity {
 
     @Column(name = "level")
     private int level;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "teamId", insertable=false, updatable=false)
+    private TeamEntity team;
 
 }
