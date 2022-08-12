@@ -44,9 +44,6 @@ databaseChangeLog:
               - column:
                   name: role
                   type: varchar(255)
-              - column:
-                  name: member_id
-                  type: bigint
         -  addForeignKeyConstraint:
              baseColumnNames: team_id
              baseTableName: member
@@ -76,3 +73,13 @@ databaseChangeLog:
               - column:
                   name: assignee_id
                   type: bigint
+  - changeSet:
+      id: 2
+      author: tieda1
+      changes:
+        - sqlFile:
+            dbms: 'h2'
+            endDelimiter: \n
+            splitStatements: true
+            path:  db/data-init.sql
+            stripComments:  true

@@ -19,7 +19,7 @@ public class MemberEntity {
     @Column(name = "level")
     private int level;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = TeamEntity.class, fetch = FetchType.LAZY)
     @JoinColumn(name = "teamId", insertable=false, updatable=false)
     private TeamEntity team;
 
