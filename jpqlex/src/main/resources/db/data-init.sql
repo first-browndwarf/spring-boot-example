@@ -1,0 +1,20 @@
+-- Team Insert
+INSERT INTO team(name, role) VALUES ('Web', 'Develop Web Page and Commmon Rest API Server')
+INSERT INTO team(name, role) VALUES ('Client', 'Develop Android or IOS app ')
+INSERT INTO team(name, role) VALUES ('Server', 'Develop Service Server ')
+INSERT INTO team(name, role) VALUES ('Manager', 'Design & Manager services and business model')
+-- Member Insert
+INSERT INTO member(name, age, level, team_id) VALUES ('Priit', 35, 6, 1)
+INSERT INTO member(name, age, level, team_id) VALUES ('Kristjan', 26, 3, 1)
+INSERT INTO member(name, age, level, team_id) VALUES ('Rikardo', 26, 4, 1)
+INSERT INTO member(name, age, level, team_id) VALUES ('Martin', 31, 5, 2)
+INSERT INTO member(name, age, level, team_id) VALUES ('Rasmus', 22, 2, 2)
+INSERT INTO member(name, age, level, team_id) VALUES ('Margus', 41, 8, 3)
+INSERT INTO member(name, age, level, team_id) VALUES ('Mart', 33, 5, 3)
+INSERT INTO member(name, age, level, team_id) VALUES ('Andres', 31, 4, 3)
+INSERT INTO member(name, age, level, team_id) VALUES ('Andrus', 25, 2, 3)
+INSERT INTO member(name, age, level, team_id) VALUES ('Jaan', 40, 8, 4)
+-- Project Insert
+INSERT INTO project(name, desc, assignee_type, assignee_id) VALUES ('Web Mainatenance', 'Maintain Company Web page', 'team', 1)
+INSERT INTO project(name, desc, assignee_type, assignee_id) VALUES ('Service Maintenance', 'Maintain the previous service', 'member', 6)
+INSERT INTO project(name, desc, assignee_type, assignee_id) VALUES ('TFT', 'Create new service', 'member', 10)
